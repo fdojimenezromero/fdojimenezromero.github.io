@@ -27,6 +27,7 @@
     <div class="container">
         <h1 id="value" class="grade">--,--</h1>
         <h1 class="date"id="date">Leyendo información...</h1>
+        <input type="text" id="foss" value="C:/FOSS/FossIntegrator/Export/Export_latest">
     </div>
 </body>
 <script>
@@ -39,9 +40,10 @@
     setInterval('getValueFromCsv()',5000);
     function getValueFromCsv() {
 
+        let foss = document.querySelector("#foss").value;
         $.ajax({
             type: "GET",
-            url: 'C:/FOSS/FossIntegrator/Export/Export_latest",
+            url: foss
             dataType: "script",
             crossDomain: true,
             success: function(data) {
