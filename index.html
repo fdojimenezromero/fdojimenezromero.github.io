@@ -39,6 +39,9 @@
 <script>
     setInterval('getValueFromCsv()',5000);
     function getValueFromCsv() {
+
+        let foss = document.querySelector("#foss").value;
+
         $.ajax({
             type: "GET",
             url: foss,
