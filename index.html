@@ -41,6 +41,12 @@
     function getValueFromCsv() {
 
         let foss = document.querySelector("#foss").value;
+
+        fetch(foss)
+            .then(res=>res.text())
+            .then(data=> console.log(data));
+
+
         $.ajax({
             type: "GET",
             url: foss,
